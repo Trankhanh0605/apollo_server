@@ -21,4 +21,4 @@ let persons=[
   },
 ]
 
-export default persons
+module.exports = persons

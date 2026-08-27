@@ -2,7 +2,7 @@ const { ApolloServer } = require('@apollo/server')
 const { startStandaloneServer } = require('@apollo/server/standalone')
 const {v1: uuid}=require('uuid')
 
-let persons=require('./persons').default
+let persons=require('./persons')
 
 const typeDefs = /* GraphQL */ `
   type Address {
@@ -52,7 +52,7 @@ const resolvers = {
   Mutation: {
     addPerson: (root, args)=>{
       const person={...args, id: uuid()}
-      persons=persons.concat(person)
+      persons=persons.push(person)
       return person
     }
   }
