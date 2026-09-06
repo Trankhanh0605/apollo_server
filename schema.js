@@ -42,7 +42,7 @@ const typeDefs = /* GraphQL */ `
     ): Person
     editNumber(name: String!, phone: String!): Person
     createUser(username: String!): User
-    login(username: STring!, password: String!): Token
+    login(username: String!, password: String!): Token
   }
 `
 
