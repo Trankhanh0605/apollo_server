@@ -3,7 +3,7 @@ const schema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    minLength: 5
+    minLength: 3
   },
   phone: {
     type: String,
